@@ -4,12 +4,14 @@
 - Modo de Usar:
 
     - Como deve passar:
-    {
-        "nome": ['AND', 'LIKE', '%_%', 'Gabriel'],
-        "data": ['OR', 'BETWEEN', ['2022-03-01', '2022-03-31']],
-        "id": ['AND', '=', 1],
-        "status": ['OR', '!=', 1]
-    }
+    ```
+        {
+            "nome": ['AND', 'LIKE', '%_%', 'Gabriel'],
+            "data": ['OR', 'BETWEEN', ['2022-03-01', '2022-03-31']],
+            "id": ['AND', '=', 1],
+            "status": ['OR', '!=', 1]
+        }
+    ```
 
 
     - Resultado esperado:
