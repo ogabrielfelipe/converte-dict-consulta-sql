@@ -1,4 +1,4 @@
-# converte-dict-consulta-sql
+# Conversor de DICT/JSON para string consulta SQL
 - Módulo destinado a converter um dict passado pelo front-end e converter para ser usado em uma consulta SQL
 
 - Modo de Usar:
@@ -15,5 +15,6 @@
 
 
     - Resultado esperado:
-    
-    'nome LIKE '%Gabriel%' OR  data BETWEEN '2022-03-01' AND '2022-03-31' AND id = 1 OR status != 1'
+    ```
+        'nome LIKE '%Gabriel%' OR  data BETWEEN '2022-03-01' AND '2022-03-31' AND id = 1 OR status != 1'
+    ```
