@@ -7,12 +7,12 @@ def convert_pesquisa_consulta(dict):
         for i in range(len(valor)):
 
             if valor[i] == 'LIKE':
-                operador = valor[i-1]
+                operador = valor[i]
                 if valor[i-1] == 'OR':
-                    operador_sql_or = valor[i]
+                    operador_sql_or = valor[i-1]
                     cons_sql.append("{}  {} {} '{}'".format(operador_sql_or, atributo, operador, valor[i+1].replace('_', valor[i+2])))
                 if valor[i-1] == 'AND':
-                    operador_sql_and = valor[i]
+                    operador_sql_and = valor[i-1]
                     cons_sql.append("{} {} {} '{}'".format(operador_sql_and, atributo, operador, valor[i+1].replace('_', valor[i+2])))
             
             elif valor[i] == 'BETWEEN':
@@ -56,4 +56,4 @@ def convert_pesquisa_consulta(dict):
                     else:
                         cons_sql.append("{}  {} {} '{}'".format(operador_sql_and, atributo, operador, valor[i+1]))
     
-    return " ".join(cons_sql)[4:]
+    return 'WHERE '+" ".join(cons_sql)[4:]
