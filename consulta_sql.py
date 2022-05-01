@@ -96,7 +96,7 @@ entry = {
     "nome": ['AND', 'LIKE', '%_%', 'Gabriel'],
     "data": ['OR', 'BETWEEN', ['2022-03-01', '2022-03-31']],
     "id": ['AND', '=', '1'],
-    "status": ['OR', '!=', 1]
+    "status": ['OR', '=', 'ENUM',1]
     
 }
 print(convert_pesquisa_consulta(entry))
